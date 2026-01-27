@@ -1,12 +1,13 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
+import { Text, View } from "react-native";
 
 const exam = () => {
   return (
     <View>
       <Text>exam</Text>
+      <Text>ab job chahiye</Text>
     </View>
-  )
-}
+  );
+};
 
-export default exam
+export default exam;

@@ -1,24 +1,21 @@
 // module.exports = function (api) {
 //   api.cache(true);
 //   return {
-//     presets: [["babel-preset-expo", { jsxImportSource: "nativewind" }]],
-//     plugins: [
+//     presets: [
+//       ["babel-preset-expo", { jsxImportSource: "nativewind" }],
 //       "nativewind/babel",
-//       "react-native-reanimated/plugin",
 //     ],
+//     plugins: ["expo-router/babel", "react-native-reanimated/plugin"],
 //   };
 // };
 
-module.exports = function(api) {
+module.exports = function (api) {
   api.cache(true);
   return {
-    presets: [
-            ['babel-preset-expo', { jsxImportSource: 'nativewind' }],
-            'nativewind/babel',
-        ],
+    presets: [["babel-preset-expo", { jsxImportSource: "nativewind" }]],
     plugins: [
-      'expo-router/babel',
-      'react-native-reanimated/plugin',
+      "expo-router/babel",
+      "react-native-reanimated/plugin", // MUST BE LAST
     ],
   };
-}; 
+};

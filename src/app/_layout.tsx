@@ -31,7 +31,7 @@ function RootNavigator() {
       {!user ? (
         <Stack.Screen name="(auth)/login" />
       ) : (
-        <Stack.Screen name="(main)"  />
+        <Stack.Screen name="(main)/(drawer)"  />
       )}
     </Stack>
   );

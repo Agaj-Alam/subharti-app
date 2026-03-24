@@ -25,7 +25,7 @@ function CustomDrawerContent(props: DrawerContentComponentProps) {
   };
 
   return (
-    <View className="flex-1 bg-indigo-900">
+    <View className="flex-1 ">
       {/* for Header */}
       <View style={{ paddingTop: insets.top }} className="px-5  pb-6">
         {/* Student ID */}
@@ -150,8 +150,11 @@ const DrawerNav = () => {
       drawerContent={CustomDrawerContent}
       screenOptions={{
         drawerStyle: {
-          backgroundColor: "#312e81",
+          backgroundColor: "#2f2fa2",
         },
+
+        //Header Tiltle Color 
+        headerShown:false
       }}
     ></Drawer>
   );

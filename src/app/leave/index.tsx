@@ -34,7 +34,7 @@ const index = () => {
             paddingBottom: 120,
           }}
         >
-          <LeaveCard status="pending" />
+          <LeaveCard status="approved" />
           <LeaveCard status="approved" />
           <LeaveCard status="approved" />
           <LeaveCard status="approved" />

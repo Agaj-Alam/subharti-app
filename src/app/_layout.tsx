@@ -1,7 +1,9 @@
 import { Stack } from "expo-router/stack";
-import { ActivityIndicator ,View} from "react-native";
+import { ActivityIndicator, View } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Provider, useSelector } from "react-redux";
 import "../../globals.css";
+import ChatBubble from "../components/ChatBoatComponents/ChatBubble";
 import { store } from "../redux/store";
 
 function RootNavigator() {
@@ -9,7 +11,7 @@ function RootNavigator() {
 
   if (user === undefined) {
     return (
-      <View className="flex-1,justify-content:'center , align-item:'center">
+      <View className="flex-1 justify-center items-center">
         <ActivityIndicator size="large" />
       </View>
     );
@@ -23,7 +25,7 @@ function RootNavigator() {
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
-          fontWeight: "600",
+          // fontWeight: "600",
         },
         headerShown: false,
       }}
@@ -31,7 +33,7 @@ function RootNavigator() {
       {!user ? (
         <Stack.Screen name="(auth)/login" />
       ) : (
-        <Stack.Screen name="(main)"  />
+        <Stack.Screen name="(main)/(drawer)" />
       )}
     </Stack>
   );
@@ -39,8 +41,21 @@ function RootNavigator() {
 
 export default function RootLayout() {
   return (
-    <Provider store={store}>
-      <RootNavigator />
-    </Provider>
+    // <Provider store={store}>
+    //   {/* <RootNavigator /> */}
+    //   <View className="flex-1">
+    //     <RootNavigator />
+    //     <ChatBubble />
+    //   </View>
+    // </Provider>
+
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Provider store={store}>
+        <View className="flex-1">
+          <RootNavigator />
+          <ChatBubble />
+        </View>
+      </Provider>
+    </GestureHandlerRootView>
   );
 }

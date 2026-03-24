@@ -63,15 +63,15 @@ const details = () => {
           <View className="flex-row justify-between mt-4">
             <View className="bg-indigo-100 rounded-2xl p-3 w-[41%] items-center justify-center">
               <Text className=" font-semibold">From date</Text>
-              <Text className=" mt-1">29-Jan-26</Text>
+              <Text className=" mt-1">10-Mar-26</Text>
             </View>
             <View className="bg-indigo-100 rounded-2xl p-3 w-[41%] items-center justify-center">
               <Text className=" font-semibold">To date</Text>
-              <Text className=" mt-1">31-Jan-26</Text>
+              <Text className=" mt-1">10-Mar-26</Text>
             </View>
             <View className="bg-indigo-100 rounded-2xl p-3 w-[15%] items-center justify-center">
               <Text className=" font-semibold">Days</Text>
-              <Text className=" mt-1 ">3</Text>
+              <Text className=" mt-1 ">1</Text>
             </View>
           </View>
         </View>
@@ -79,14 +79,14 @@ const details = () => {
         {/* Leave Details  */}
         <View className="bg-white rounded-2xl p-4 ">
           <Text className="font-bold text-lg ml-3">Applied on</Text>
-          <Text className="mb-3 text-gray-600 text-lg">29-Jan-26</Text>
+          <Text className="mb-3 text-gray-600 text-lg">10-Mar-26</Text>
 
           <Text className="font-bold">Leave type</Text>
           <Text className="mb-3 text-gray-600 text-lg">Both</Text>
 
           <Text className="font-bold">Leave reason</Text>
           <Text className=" text-gray-600 text-lg">
-            I have to go to celebrate festival
+            I want to go to delhi for medical checkup.
           </Text>
         </View>
 

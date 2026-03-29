@@ -1,16 +1,15 @@
-import { Tabs } from "expo-router";
 import React from "react";
-import { Text, View } from "react-native";
+import { Image, View } from "react-native";
 
 const exam = () => {
   return (
-    <>
-    
-    <View>
-      <Text>exam</Text>
-      <Text>ab job chahiye</Text>
+    <View className="flex-1 justify-center items-center bg-white">
+      <Image
+        source={require("@/src/assets/images/failedToReachServer.png")}
+        className="w-80 h-70"
+        resizeMode="contain"
+      />
     </View>
-    </>
   );
 };
 

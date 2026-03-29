@@ -1,12 +1,16 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Image } from "react-native";
+import React from "react";
 
-const payment = () => {
+const Payment = () => {
   return (
-    <View>
-      <Text>payment</Text>
+    <View className="flex-1 justify-center items-center bg-white">
+      <Image
+        source={require("@/src/assets/images/failedToReachServer.png")}
+        className="w-80 h-70"
+        resizeMode="contain"
+      />
     </View>
-  )
-}
+  );
+};
 
-export default payment
+export default Payment;

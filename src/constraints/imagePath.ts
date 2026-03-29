@@ -21,4 +21,8 @@ export default {
   logo1: require("@/src/assets/images/Raman.jpg"),
   chatbot_image: require("@/src/assets/images/chatBotImage.png"),
   header_logo: require("@/src/assets/images/headerLogo.png"),
+  central_lab: require("@/src/assets/images/central_lab.png"),
+  news1: require("@/src/assets/images/news1.png"),
+  news2: require("@/src/assets/images/news2.png"),
+  news3: require("@/src/assets/images/news3.png"),
 };

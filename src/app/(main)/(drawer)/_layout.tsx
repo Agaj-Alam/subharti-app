@@ -41,7 +41,7 @@ function CustomDrawerContent(props: DrawerContentComponentProps) {
           />
 
           <View className="ml-4">
-            <Text className="text-orange-700 font-bold text-lg">AGAJ ALAM</Text>
+            <Text className="text-orange-700 font-bold text-lg">{user.name}</Text>
             <Text className="text-gray-700 text-sm mt-1">E.No: </Text>
           </View>
         </View>

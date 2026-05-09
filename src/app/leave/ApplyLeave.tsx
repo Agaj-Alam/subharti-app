@@ -308,3 +308,150 @@ const ApplyLeave = () => {
 };
 
 export default ApplyLeave;
+
+
+
+// import { Stack } from "expo-router";
+// import React, { useState } from "react";
+// import {
+//   View,
+//   Text,
+//   ScrollView,
+//   TouchableOpacity,
+//   TextInput,
+//   Platform,
+//   Modal,
+//   Alert,
+// } from "react-native";
+// import DateTimePicker, {
+//   DateTimePickerEvent,
+// } from "@react-native-community/datetimepicker";
+// import AsyncStorage from "@react-native-async-storage/async-storage";
+
+// const BASE_URL = "http://YOUR_IP:8080";
+
+// // 🔥 API
+// const applyLeaveApi = async (data: any) => {
+//   const token = await AsyncStorage.getItem("token");
+
+//   const response = await fetch(`${BASE_URL}/leave/apply`, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//       Authorization: `Bearer ${token}`,
+//     },
+//     body: JSON.stringify(data),
+//   });
+
+//   let result = {};
+//   try {
+//     result = await response.json();
+//   } catch {
+//     throw new Error("Server error");
+//   }
+
+//   if (!response.ok) {
+//     throw new Error((result as any).error || "Failed");
+//   }
+
+//   return result;
+// };
+
+// const ApplyLeave = () => {
+//   const [leaveType, setLeaveType] = useState("Hostel");
+//   const [reason, setReason] = useState("");
+//   const [startDate, setStartDate] = useState(new Date());
+//   const [endDate, setEndDate] = useState(new Date());
+//   const [showPicker, setShowPicker] = useState<any>(null);
+
+//   const [dean, setDean] = useState("");
+//   const [warden, setWarden] = useState("");
+//   const [chiefWarden, setChiefWarden] = useState("");
+
+//   const handleSubmit = async () => {
+//     try {
+//       const payload = {
+//         leaveType,
+//         startDate: startDate.toISOString().split("T")[0],
+//         endDate: endDate.toISOString().split("T")[0],
+//         reason,
+//         deanName: dean,
+//         wardenName: leaveType === "College" ? null : warden,
+//         chiefWardenName: leaveType === "College" ? null : chiefWarden,
+//       };
+
+//       await applyLeaveApi(payload);
+//       Alert.alert("Success", "Leave applied successfully");
+//     } catch (err: any) {
+//       Alert.alert("Error", err.message);
+//     }
+//   };
+
+//   return (
+//     <>
+//       <Stack.Screen options={{ title: "Apply Leave" }} />
+
+//       <ScrollView className="flex-1 bg-gray-100 p-4">
+
+//         {/* Leave Type */}
+//         <View className="bg-white rounded-2xl p-4 mb-3">
+//           <Text className="text-center text-lg mb-4">Leave Type</Text>
+
+//           <View className="flex-row justify-around">
+//             {["Hostel", "College", "Both"].map((type) => (
+//               <TouchableOpacity
+//                 key={type}
+//                 onPress={() => setLeaveType(type)}
+//               >
+//                 <Text>{type}</Text>
+//               </TouchableOpacity>
+//             ))}
+//           </View>
+//         </View>
+
+//         {/* Dates */}
+//         <TouchableOpacity onPress={() => setShowPicker("start")}>
+//           <Text>Start: {startDate.toDateString()}</Text>
+//         </TouchableOpacity>
+
+//         <TouchableOpacity onPress={() => setShowPicker("end")}>
+//           <Text>End: {endDate.toDateString()}</Text>
+//         </TouchableOpacity>
+
+//         {showPicker && (
+//           <DateTimePicker
+//             value={showPicker === "start" ? startDate : endDate}
+//             mode="date"
+//             onChange={(e, d) => {
+//               if (!d) return;
+//               if (showPicker === "start") setStartDate(d);
+//               else setEndDate(d);
+//               setShowPicker(null);
+//             }}
+//           />
+//         )}
+
+//         {/* Reason */}
+//         <TextInput
+//           placeholder="Enter reason"
+//           value={reason}
+//           onChangeText={setReason}
+//           className="border p-3 mt-3 bg-white rounded-xl"
+//         />
+
+//         {/* Submit */}
+//         <TouchableOpacity
+//           onPress={handleSubmit}
+//           className="bg-indigo-800 rounded-xl py-4 mt-5"
+//         >
+//           <Text className="text-white text-center">
+//             Submit application
+//           </Text>
+//         </TouchableOpacity>
+
+//       </ScrollView>
+//     </>
+//   );
+// };
+
+// export default ApplyLeave;

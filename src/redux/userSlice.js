@@ -1,7 +1,7 @@
 // import profileImg from ''
 
 const initialState = {
-  name: "RAMAN KUMAR",
+  name: "AGAJ ALAM",
   student_id: "43069",
   enroll: "2201000000253",
   course: "B.TECH",
@@ -12,9 +12,9 @@ const initialState = {
   date_of_admission: "08/13/2022 00:00:00",
   father_name: "RIYAJ AHAMAD",
   mother_name: "NOORJAHAN KHATUN",
-  date_of_birth: "04/05/2003 00:00:00",
+  date_of_birth: "06/04/2003 00:00:00",
   gender: "MALE",
-  mobile_no: "7856846471",
+  mobile_no: "9939200283",
   cast_category: "GEN",
   religion: "MUSLIM",
   nationality: "INDIA",
@@ -24,7 +24,7 @@ const initialState = {
   email: "agajalam283@gmail.com",
   contact_no: "9939200283",
   local_address: "EAST CHAMPARAN",
-//   avatar: profileImg,
+//  image
 };
 
 const userSlice = {

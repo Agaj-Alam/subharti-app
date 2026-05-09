@@ -7,7 +7,7 @@ const index = () => {
     <>
     <Stack.Screen
         options={{
-          title: "News Letter",
+          title: "Gallery",
           headerTitleAlign: "center",
           headerShown: true,
         }}

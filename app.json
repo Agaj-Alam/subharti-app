@@ -19,7 +19,8 @@
         "monochromeImage": "./src/assets/images/adaptive-icon.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.agaj_alam.subharti"
     },
     "web": {
       "bundler": "metro",
@@ -46,6 +47,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "b51a0812-84fe-4bf3-95c1-0de7f03f43d7"
+      }
     }
   }
 }
